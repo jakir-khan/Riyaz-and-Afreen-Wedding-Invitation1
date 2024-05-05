@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasheem B'day</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+:root{
+  --pink:#EE0548;
+  --black:#130f40;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  border:.2rem solid var(--black);
+  color:var(--black);
+  font-size: 1.7rem;
+  padding:.8rem 3rem;
+  cursor: pointer;
+  background: none;
+  margin-left: 30%;
+}
+
+.btn:hover{
+  background: var(--pink);
+  border-color: var(--pink);
+  color:#fff;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+  <a href="index.html" class="btn">Back</a>
+
+    <div class="gallery">
+        <img src="rasheem1.jpg" alt="Image 1" onclick="openModal('rasheem1.jpg')">
+        <img src="rasheem6.jpg" alt="Image 2" onclick="openModal('rasheem6.jpg')">
+        <img src="rasheem3.jpg" alt="Image 3" onclick="openModal('rasheem3.jpg')">
+        <img src="rasheem4.jpg" alt="Image 3" onclick="openModal('rasheem4.jpg')">
+        <img src="rasheem.jpg" alt="Image 3" onclick="openModal('rasheem.jpg')">
+        <img src="rasheem2.jpg" alt="Image 3" onclick="openModal('rasheem2.jpg')">
+        <img src="rasheem7.jpeg" alt="Image 3" onclick="openModal('rasheem7.jpeg')">
+        <img src="rasheem8.jpeg" alt="Image 3" onclick="openModal('rasheem8.jpeg')">
+        <img src="rasheem9.jpeg" alt="Image 3" onclick="openModal('rasheem9.jpeg')">
+        <img src="rasheem10.jpeg" alt="Image 3" onclick="openModal('rasheem10.jpeg')">
+        <img src="rasheem2.jpg" alt="Image 3" onclick="openModal('rasheem2.jpg')">
+        <img src="rasheem11.jpeg" alt="Image 3" onclick="openModal('rasheem11.jpeg')">
+        <!-- <img src="rasheem2.jpeg" alt="Image 3" onclick="openModal('rasheem2.jpeg')"> -->
+
+
+        <!-- Add more images here -->
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-img" class="modal-content">
+    </div>
+
+    <script src="scripts.js">
+        function openModal(imageSrc) {
+  var modal = document.getElementById('modal');
+  var modalImg = document.getElementById('modal-img');
+  modal.style.display = 'block';
+  modalImg.src = imageSrc;
+}
+
+function closeModal() {
+  var modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+
+
+    </script>
+
+</body>
+
+</html>
+
